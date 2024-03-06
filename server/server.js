@@ -15,6 +15,7 @@ const server = new ApolloServer({
 });
 
 const startApolloServer = async () => {
+    debugger
     await server.start();
   
     app.use(express.urlencoded({ extended: false }));

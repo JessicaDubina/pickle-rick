@@ -1,9 +1,24 @@
 const { User } = require('../models')
 const { signToken, AuthenticationError } = require('../utils/auth');
 
+//TODO: move this out later --need for query to run so backend will start
+const DATABASE = {
+  users: [{
+    _id: 1,
+    username: 'userOne',
+    email: 'user.one@example.com',
+    password: '1234',
+  }, {
+    _id: 2,
+    username: 'userTwo',
+    email: 'user.two@example.com',
+    password: '1234',
+  }],
+}
+
 const resolvers = {
     Query: {
-        //TODO: add in queries here 
+      users: DATABASE.users,
     },
     
     Mutation: {
