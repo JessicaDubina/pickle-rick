@@ -5,15 +5,16 @@ const typeDefs = `
     username: String
     email: String
     password: String
+    instructor: Boolean
+  }
+  
+  type Auth {
+    token: ID
+    user: User
   }
 
   type Query {
     users: [User]
-  }
-  
-  type Auth {
-    token: ID!
-    user: User
   }
 
   type Mutation {
